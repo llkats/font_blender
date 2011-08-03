@@ -99,6 +99,10 @@ a:hover { color: #036; }
    ||                                              ||
     \\ ========================================== //
 */
+#container {
+	margin: 0 auto;
+	width: 960px;
+}
 
 h1 {
 	font-family: Arial, sans-serif;
@@ -106,7 +110,47 @@ h1 {
 }
 
 header {
-	height: 60px;
+	height: 120px;
+	width: 400px;
+	position: relative;
+	margin-top: 20px;
+}
+
+header img#logo {
+}
+
+header h1 {
+  font-size: 36pt;
+  display: inline;
+  top: 40px;
+  left: 70px;
+  position: absolute;
+}
+
+header h1 span#title-font {
+  font-family: 'Lobster', cursive;
+  color: #f64d3a;
+}
+
+header h1 span#title-blender {
+  font-family: 'Open Sans', sans-serif;
+  color: #d1dbb9;
+  font-size: 0.9em;
+}
+
+article {
+  width: 860px;
+  margin: 0 auto;
+}
+
+article h1 {
+  background-color: #f64d3a;
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+  height: 50px;
+  font: 300 28pt 'Open Sans', sans-serif;
+  color: #fff;
 }
 
 button {
@@ -114,10 +158,10 @@ button {
 	float: right;
 }
 
-
-#container {
-	margin: 0 auto;
-	width: 600px;
+nav#filter ul{
+  width: 860px;
+  background-color: #fbf2d3;
+  height: 40px;
 }
 
 nav ul {
@@ -149,6 +193,7 @@ p.variations {
 #steptwo h1 {
 	
 }
+
 
 #steptwo div.sidebar {
 	float: left;
