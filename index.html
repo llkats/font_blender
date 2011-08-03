@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="css/style.css?v=2">
 
 	<script src="js/libs/modernizr-1.7.min.js"></script>
+
 </head>
 <body>
 	<div id="container">
@@ -34,35 +35,11 @@
 			</nav>
 		</header>
 
-		<div id="steptwo" role="main">
-			
-			<div class="font">
-				<h2>Arno Pro <span class="variation">Regular</span></h2>
-				<p class="compatibletext">5 compatible fonts</p>
-				<p class="sample">The quick brown fox jumped over the lazy dog.</p>
-				<p class="variations">show variations(5)</p>
-				<button type="button" name="choose" value="Choose" class="css3button">Choose</button>
-			</div>
-			
-			<div class="font">
-				<h2>Arno Pro <span class="variation">Regular</span></h2>
-				<p class="compatibletext">5 compatible fonts</p>
-				<p class="sample">The quick brown fox jumped over the lazy dog.</p>
-				<p class="variations">show variations(5)</p>
-				<button type="button" name="choose" value="Choose" class="css3button">Choose</button>
-			</div>
-			
-			<div class="font">
-				<h2>Arno Pro <span class="variation">Regular</span></h2>
-				<p class="compatibletext">5 compatible fonts</p>
-				<p class="sample">The quick brown fox jumped over the lazy dog.</p>
-				<p class="variations">show variations(5)</p>
-				<button type="button" name="choose" value="Choose" class="css3button">Choose</button>
-			</div>
+		<div id="stepone" role="main">
 
 		</div>
 		
-		<div id="stepone" role="main">
+		<div id="steptwo" role="main">
 			
 			<div class="sidebar">
 				<p>Primary:</p>
@@ -145,6 +122,50 @@
 		</footer>
 	</div>
 	
+	
+	<script type="text/javascript" charset="utf-8">
+		// Droid Sans: Lobster, Raleway, Josefin Slab, Arvo
+		// Lobster: Droid, Cantarell, Maven, Open Sans, Josefin Sans
+		// Arvo: Droid, Cantarell, Maven, Open Sans
+		// Raleway: Droid, Cantarell, Maven, Open Sans
+		// Josefin Slab: Droid, Cantarell, Maven, Open Sans
+		// Josefin Sans: Lobster, Vollkorn, Open Sans
+		// Vollkorn: Cantarell, Josefin Sans, Maven, Open Sans
+		// Cantarell: Lobster, Arvo, Raleway, Josefin Slab, Vollkorn
+		// Maven: Lobster, Arvo Raleway, Josefin Slab, Josefin Sans, Vollkorn
+		// Open Sans: Lobster, Arvo, Raleway, Josefin Slab, Josefin Sans, Vollkorn
+		
+		var fonts = [
+			{font: 'Droid Sans', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'droid'},
+			{font: 'lobster', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'lobster'},
+			{font: 'arvo', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'arvo'},
+			{font: 'raleway', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'raleway'},
+			{font: 'josefinslab', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'josefinslab'},
+			{font: 'josefinsans', number: '3 compatible fonts', varnum: 'show variations(3)', href: 'josefinsans'},
+			{font: 'vollkorn', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'arno'},
+			{font: 'cantarell', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'cantarell'},
+			{font: 'maven', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'maven'},
+			{font: 'opensans', number: '6 compatible fonts', varnum: 'show variations(6)', href: 'opensans'}
+		];
+		
+		var fontdivs = document.getElementsByClassName("font");
+		var step1 = document.getElementById("stepone");
+		for (var i = 0, l = fonts.length; i < l; i++) {
+			var entry = fonts[i];
+			var elt = document.createElement("div");
+			elt.className = "font";
+			
+			elt.innerHTML = "<h2 data-name=\"" + entry.font + "\">" + entry.font + " <span class=\"variation\">Regular</span></h2>" +
+				"<p class=\"compatibletext\" data-number=\"" + entry.number + "\">" + entry.number + "</p>" +
+				"<p class=\"sample\" style=\"font-family:" + entry.font + "\">The quick brown fox jumped over the lazy dog.</p>" +
+				"<p class=\"variations\" data-varnum=\"" + entry.varnum + "\">" + entry.varnum + "</p>" +
+				"<button type=\"button\" name=\"choose\" value=\"Choose\" class=\"css3button\">Choose</button>";
+				
+			step1.appendChild(elt);
+		}
+		
+		
+	</script>
 	
 	<script>
 		
