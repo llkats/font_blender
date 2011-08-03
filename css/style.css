@@ -130,6 +130,36 @@ p.variations {
 	float: right;
 }
 
+/* Blend Styles */
+
+#steptwo h1 {
+	
+}
+
+#steptwo div.sidebar {
+	float: left;
+	width: 200px;
+}
+
+#steptwo div.preview {
+	float: right;
+	width: 400px
+	;
+}
+
+#steptwo ul {
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#steptwo li {
+	float: left;
+	margin: 10px;
+}
+
+
 
 
 button.css3button {

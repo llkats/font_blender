@@ -1,4 +1,4 @@
-$(function(){
+(function(){
 
 	fonts : {
 		"arno" : {
@@ -11,4 +11,4 @@ $(function(){
 
 	
 
-});
+}());
