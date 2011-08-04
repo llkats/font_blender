@@ -107,6 +107,8 @@
 				<h3>Compiled aspect oriented programming</h3>
 				<p>Rebased after a cloud. Assorted YAML compiled through established DBA. Some agile time boxed into exclusive XP. Assorted SQL debugged off any boxing. Assorted BDD interpreted out of specific SOAP. Elected polymorphism debugged above one stack overflow. One pomodoro interpreted over a debugger. Designated pomodoro rebased outside designated pomodoro.
 			</div>
+			
+			<a id="top" href="#">Go to top</a>
 		<article>
 
 		<footer>
@@ -132,12 +134,12 @@
 			{font: 'Lobster', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'lobster', suggest: "Droid, Cantarell, Maven, Open Sans, Josefin Sans"},
 			{font: 'Arvo', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'arvo', suggest: "Droid, Cantarell, Maven, Open Sans"},
 			{font: 'Raleway', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'raleway', suggest: "Droid, Cantarell, Maven, Open Sans"},
-			{font: 'Josefinslab', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'josefinslab', suggest: "Droid, Cantarell, Maven, Open Sans"},
-			{font: 'Josefinsans', number: '3 compatible fonts', varnum: 'show variations(3)', href: 'josefinsans', suggest: "Lobster, Vollkorn, Open Sans"},
+			{font: 'Josefin Slab', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'josefinslab', suggest: "Droid, Cantarell, Maven, Open Sans"},
+			{font: 'Josefin Sans', number: '3 compatible fonts', varnum: 'show variations(3)', href: 'josefinsans', suggest: "Lobster, Vollkorn, Open Sans"},
 			{font: 'Vollkorn', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'vollkorn', suggest: "Lobster, Vollkorn, Open Sans"},
 			{font: 'Cantarell', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'cantarell', suggest: "Lobster, Arvo, Raleway, Josefin Slab, Vollkorn"},
-			{font: 'Maven', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'maven', suggest: "Lobster, Arvo Raleway, Josefin Slab, Josefin Sans, Vollkorn"},
-			{font: 'Opensans', number: '6 compatible fonts', varnum: 'show variations(6)', href: 'opensans', suggest: "Lobster, Arvo, Raleway, Josefin Slab, Josefin Sans, Vollkorn"}
+			{font: 'Maven Pro', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'maven', suggest: "Lobster, Arvo Raleway, Josefin Slab, Josefin Sans, Vollkorn"},
+			{font: 'Open Sans', number: '6 compatible fonts', varnum: 'show variations(6)', href: 'opensans', suggest: "Lobster, Arvo, Raleway, Josefin Slab, Josefin Sans, Vollkorn"}
 		];
 		
 		var fontdivs = document.getElementsByClassName("font");
@@ -175,7 +177,7 @@
 			var suggestions = document.getElementsByClassName("sidebar")[0];
 			for (var i = 0, l = arr.length; i < l; i++) {
 				var current = arr[i];
-				var sel = document.createElement("div");
+				var sel = document.createElement("section");
 				sel.className = "fontselection";
 				sel.innerHTML = "<label for=\"pridropdown\" data-suggestlabel=\"suggestlabel\">" + current + "</label>" +
 					"<select name=\"suggest0\" " + i + " id=\"suggest0\" " + i + "><option value=\"h1\">h1</option><option value=\"h2\">h2</option><option value=\"h3\">h3</option><option value=\"h4\">h4</option><option value=\"h5\">h5</option><option value=\"h6\">h6</option><option value=\"p\">p</option><option value=\"li\">li</option></select>";
@@ -185,6 +187,8 @@
 			pre.setAttribute("style", "font-family:" + link);
 			
 		}
+		
+
 
 		
 	</script>
