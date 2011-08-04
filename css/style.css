@@ -245,6 +245,14 @@ footer {
 	padding: 10px;
 }
 
+#steptwo div.sidebar h2 {
+  margin-bottom: 0.5em;
+}
+
+#steptwo div.sidebar section {
+  margin-bottom: 10px;
+}
+
 #steptwo div.preview {
 	float: right;
 	width: 588px;
