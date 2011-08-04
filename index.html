@@ -40,34 +40,7 @@
 					<li>Handwriting</li>
 				</ul>
 			</nav>
-    </article
-    >
-		<div id="steptwo" role="main">
-			
-			<div class="font">
-				<h2>Arno Pro <span class="variation">Regular</span></h2>
-				<p class="compatibletext">5 compatible fonts</p>
-				<p class="sample">The quick brown fox jumped over the lazy dog.</p>
-				<p class="variations">show variations(5)</p>
-				<button type="button" name="choose" value="Choose" class="css3button">Choose</button>
-			</div>
-			
-			<div class="font">
-				<h2>Arno Pro <span class="variation">Regular</span></h2>
-				<p class="compatibletext">5 compatible fonts</p>
-				<p class="sample">The quick brown fox jumped over the lazy dog.</p>
-				<p class="variations">show variations(5)</p>
-				<button type="button" name="choose" value="Choose" class="css3button">Choose</button>
-			</div>
-			
-			<div class="font">
-				<h2>Arno Pro <span class="variation">Regular</span></h2>
-				<p class="compatibletext">5 compatible fonts</p>
-				<p class="sample">The quick brown fox jumped over the lazy dog.</p>
-				<p class="variations">show variations(5)</p>
-				<button type="button" name="choose" value="Choose" class="css3button">Choose</button>
-			</div>
-		</header>
+    </article>
 
 		<div id="stepone" role="main">
 		</div>
@@ -205,7 +178,7 @@
 		
 		function stepTwo() {
 			var link = this.getAttribute("data-href");
-			window.location.href.appendChild(link);
+			window.location.href = "index.html#" + link; 
 			document.getElementById("steptwo").scrollIntoView();
 			var sideb = document.getElementsByClassName('fontselection');
 			
