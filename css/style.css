@@ -236,13 +236,12 @@ p.variations {
 
 #steptwo div.sidebar {
 	float: left;
-	width: 200px;
+	width: 250px;
 }
 
 #steptwo div.preview {
 	float: right;
-	width: 400px
-	;
+	width: 610px;
 }
 
 #steptwo ul {
