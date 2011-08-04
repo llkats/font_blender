@@ -252,6 +252,12 @@ footer {
   margin-bottom: 10px;
 }
 
+#steptwo div.sidebar section select {
+  float: right;
+  width: 100px;
+}
+
+
 #steptwo div.preview {
 	float: right;
 	width: 588px;
