@@ -197,8 +197,36 @@ p.variations {
 
 #stepone .font{
   border: 1px solid #b8b8b8;
-  width: 860px;
-  
+  width: 840px;
+  padding: 10px 10px 40px 10px;
+  font-size: 14pt;
+  margin-bottom: 10px;
+}
+
+#stepone .font h2 {
+  float: left;
+}
+
+#stepone .font .sample {
+  clear: both;
+}
+
+#stepone .font .compatibletext{
+  float: right;
+}
+
+#stepone .font .font-right{
+  float: right;
+  height: 30px;
+}
+
+#stepone .font .font-right .variations{
+  margin-right: 10px;
+}
+
+#stepone .font .font-right button{
+  display: inline;
+
 }
 
 #steptwo h1 {
