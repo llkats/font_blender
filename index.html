@@ -48,7 +48,7 @@
 			<div class="sidebar">
 				<section class="fontselection">
 				  <h2>Primary:</h2>
-					<label for="pridropdown" data-prilabel="prilabel"></label>
+					<label for="pridropdown" data-prilabel="prilabel" id="primarylabel"></label>
 					<select name="  " id="primary">
 						<option value="h1">h1</option>
 						<option value="h2">h2</option>
@@ -62,7 +62,7 @@
 				</section>
 				<section class="fontselection">
 				  <h2>In use:</h2>
-					<label for="usedropdown" data-prilabel="prilabel">Arno Pro</label>
+					<label for="usedropdown" data-prilabel="prilabel" id="inuselabel"></label>
 					<select name="inuse" id="inuse">
 						<option value="h1">h1</option>
 						<option value="h2">h2</option>
@@ -74,20 +74,7 @@
 						<option value="li">li</option>
 					</select>
 				</section>
-				<section class="fontselection">
-				  <h2>Suggested:</h2>
-					<label for="pridropdown" data-suggestlabel="suggestlabel">Arno Pro</label>
-					<select name="suggest01" id="suggest01">
-						<option value="h1">h1</option>
-						<option value="h2">h2</option>
-						<option value="h3">h3</option>
-						<option value="h4">h4</option>
-						<option value="h5">h5</option>
-						<option value="h6">h6</option>
-						<option value="p">p</option>
-						<option value="li">li</option>
-					</select>
-				</section>
+					<h2>Suggested:</h2>
 			</div>
 							
 			<div class="preview">
@@ -169,6 +156,13 @@
 			var sug = this.getAttribute("data-suggest");
 			var arr = [];
 			arr = sug.split(", ");
+			
+			var pl = document.getElementById("primarylabel");
+			pl.setAttribute("style", "font-family:" + link);
+			
+			var il = document.getElementById("inuselabel");
+			il.setAttribute("style", "font-family:" + link);
+			
 			document.getElementById("steptwo").scrollIntoView();
 			var sideb = document.getElementsByTagName('label');
 			for (var i = 0, l = 2; i < l; i++) {
