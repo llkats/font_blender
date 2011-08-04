@@ -192,7 +192,10 @@ p.compatibletext {
 p.variations {
 	float: right;
 }
-
+footer {
+  clear: both;
+  height: 20px;
+}
 /* Blend Styles */
 
 #stepone .font{
@@ -230,18 +233,40 @@ p.variations {
 }
 
 #steptwo h1 {
+  font-size: 24pt;
 	
 }
 
 
 #steptwo div.sidebar {
 	float: left;
-	width: 250px;
+	width: 228px;
+	border: 1px solid #b8b8b8;
+	padding: 10px;
 }
 
 #steptwo div.preview {
 	float: right;
-	width: 610px;
+	width: 588px;
+  border: 1px solid #b8b8b8;
+  padding: 10px;
+
+}
+
+#steptwo div.preview h2 {
+  clear: both;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 16pt;
+}
+
+#steptwo div.preview h3 {
+  font-size: 12pt;
+  margin-bottom: 1em;
+}
+
+#steptwo p {
+  margin-bottom: 2em;
 }
 
 #steptwo ul {
@@ -253,7 +278,13 @@ p.variations {
 
 #steptwo li {
 	float: left;
-	margin: 10px;
+	padding: 0 10px;
+	border-right: 1px solid #000;
+}
+
+
+#steptwo li.last {
+  border: none;
 }
 
 
