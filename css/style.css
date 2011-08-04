@@ -109,7 +109,6 @@ body {
 }
 
 h1 {
-	font-family: Arial, sans-serif;
 	font-size: 18px;
 }
 
@@ -244,6 +243,20 @@ footer {
 	border: 1px solid #b8b8b8;
 	padding: 10px;
 }
+
+#steptwo div.sidebar h2 {
+  margin-bottom: 0.5em;
+}
+
+#steptwo div.sidebar section {
+  margin-bottom: 10px;
+}
+
+#steptwo div.sidebar section select {
+  float: right;
+  width: 100px;
+}
+
 
 #steptwo div.preview {
 	float: right;
