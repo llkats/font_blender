@@ -48,7 +48,7 @@
 			<div class="sidebar">
 				<p>Primary:</p>
 				<div class="fontselection">
-					<label for="pridropdown">Arno Pro</label>
+					<label for="pridropdown" data-prilabel="prilabel"></label>
 					<select name="primary" id="primary">
 						<option value="h1">h1</option>
 						<option value="h2">h2</option>
@@ -62,7 +62,7 @@
 				</div>
 				<p>In use:</p>
 				<div class="fontselection">
-					<label for="usedropdown">Arno Pro</label>
+					<label for="usedropdown" data-prilabel="prilabel">Arno Pro</label>
 					<select name="inuse" id="inuse">
 						<option value="h1">h1</option>
 						<option value="h2">h2</option>
@@ -76,21 +76,8 @@
 				</div>
 				<p>Suggested:</p>
 				<div class="fontselection">
-					<label for="pridropdown">Arno Pro</label>
+					<label for="pridropdown" data-suggestlabel="suggestlabel">Arno Pro</label>
 					<select name="suggest01" id="suggest01">
-						<option value="h1">h1</option>
-						<option value="h2">h2</option>
-						<option value="h3">h3</option>
-						<option value="h4">h4</option>
-						<option value="h5">h5</option>
-						<option value="h6">h6</option>
-						<option value="p">p</option>
-						<option value="li">li</option>
-					</select>
-				</div>
-				<div class="fontselection">
-					<label for="pridropdown">Arno Pro</label>
-					<select name="primary" id="primary">
 						<option value="h1">h1</option>
 						<option value="h2">h2</option>
 						<option value="h3">h3</option>
@@ -141,9 +128,9 @@
 		// Open Sans: Lobster, Arvo, Raleway, Josefin Slab, Josefin Sans, Vollkorn
 		
 		var fonts = [
-			{font: 'Droid Sans', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'droid'},
-			{font: 'Lobster', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'lobster'},
-			{font: 'Arvo', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'arvo'},
+			{font: 'Droid Sans', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'droid', suggest: "Lobster, Raleway, Josefin Slab, Arvo"},
+			{font: 'Lobster', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'lobster', suggest: "Droid, Cantarell, Maven, Open Sans, Josefin Sans"},
+			{font: 'Arvo', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'arvo', suggest: "Droid, Cantarell, Maven, Open Sans"},
 			{font: 'Raleway', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'raleway'},
 			{font: 'Josefinslab', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'josefinslab'},
 			{font: 'Josefinsans', number: '3 compatible fonts', varnum: 'show variations(3)', href: 'josefinsans'},
@@ -164,7 +151,7 @@
 				"<p class=\"compatibletext\" data-number=\"" + entry.number + "\">" + entry.number + "</p>" +
 				"<p class=\"sample\" style=\"font-family:" + entry.font + "\">The quick brown fox jumped over the lazy dog.</p>" +
 				"<div class=\"font-right\"><span class=\"variations\" data-varnum=\"" + entry.varnum + "\">" + entry.varnum + "</span>" +
-				"<button type=\"button\" name=\"choose\" value=\"Choose\" data-href=\"" + entry.href + "\" class=\"css3button\">Choose</button></div>";
+				"<button type=\"button\" name=\"choose\" value=\"Choose\" data-href=\"" + entry.href + "\" data-suggest=\"" + entry.suggest + "\" class=\"css3button\">Choose</button></div>";
 				
 			step1.appendChild(elt);
 		}
@@ -177,10 +164,18 @@
 		
 		function stepTwo() {
 			var link = this.getAttribute("data-href");
-			window.location.href = "index.html#" + link; 
+			var sug = this.getAttribute("data-suggest");
+			var arr = [];
+			arr = sug.split(", ");
 			document.getElementById("steptwo").scrollIntoView();
-			var sideb = document.getElementsByClassName('fontselection');
-			
+			var sideb = document.getElementsByTagName('label');
+			for (var i = 0, l = 2; i < l; i++) {
+				var text = document.getElementById()
+				sideb[i].innerHTML = link;
+			}
+			for (var i = 0, l = arr.length; i < l; i++) {
+				
+			}
 		}
 		
 		
