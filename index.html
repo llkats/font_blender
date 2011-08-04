@@ -41,6 +41,7 @@
 				</ul>
 			</nav>
 			<div class="font">
+    </article>
 
 		</header>
 		</article>			
@@ -144,15 +145,15 @@
 		
 		var fonts = [
 			{font: 'Droid Sans', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'droid'},
-			{font: 'lobster', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'lobster'},
-			{font: 'arvo', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'arvo'},
-			{font: 'raleway', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'raleway'},
-			{font: 'josefinslab', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'josefinslab'},
-			{font: 'josefinsans', number: '3 compatible fonts', varnum: 'show variations(3)', href: 'josefinsans'},
-			{font: 'vollkorn', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'arno'},
-			{font: 'cantarell', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'cantarell'},
-			{font: 'maven', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'maven'},
-			{font: 'opensans', number: '6 compatible fonts', varnum: 'show variations(6)', href: 'opensans'}
+			{font: 'Lobster', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'lobster'},
+			{font: 'Arvo', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'arvo'},
+			{font: 'Raleway', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'raleway'},
+			{font: 'Josefinslab', number: '4 compatible fonts', varnum: 'show variations(4)', href: 'josefinslab'},
+			{font: 'Josefinsans', number: '3 compatible fonts', varnum: 'show variations(3)', href: 'josefinsans'},
+			{font: 'Vollkorn', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'arno'},
+			{font: 'Cantarell', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'cantarell'},
+			{font: 'Maven', number: '5 compatible fonts', varnum: 'show variations(5)', href: 'maven'},
+			{font: 'Opensans', number: '6 compatible fonts', varnum: 'show variations(6)', href: 'opensans'}
 		];
 		
 		var fontdivs = document.getElementsByClassName("font");
@@ -166,12 +167,24 @@
 				"<p class=\"compatibletext\" data-number=\"" + entry.number + "\">" + entry.number + "</p>" +
 				"<p class=\"sample\" style=\"font-family:" + entry.font + "\">The quick brown fox jumped over the lazy dog.</p>" +
 				"<p class=\"variations\" data-varnum=\"" + entry.varnum + "\">" + entry.varnum + "</p>" +
-				"<button type=\"button\" name=\"choose\" value=\"Choose\" class=\"css3button\">Choose</button>";
+				"<button type=\"button\" name=\"choose\" value=\"Choose\" data-href=\"" + entry.href + "\" class=\"css3button\">Choose</button>";
 				
 			step1.appendChild(elt);
 		}
 		
+		var buttons = document.getElementsByTagName("button");
+		for (var i = 0, l = buttons.length; i < l; i++) {
+			var b = buttons[i];
+			b.addEventListener("click", stepTwo, false);
+		}
 		
+		function stepTwo() {
+			var link = this.getAttribute("data-href");
+			window.location.href = "index.html#" + link; 
+			document.getElementById("steptwo").scrollIntoView();
+			var sideb = document.getElementsByClassName('fontselection');
+			
+		}
 		
 		
 	</script>
