@@ -210,6 +210,8 @@ footer {
 
 #stepone .font .sample {
   clear: both;
+  font-size: 24pt;
+  padding: 20px 0;
 }
 
 #stepone .font .compatibletext{
