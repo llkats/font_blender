@@ -49,7 +49,7 @@
 				<section class="fontselection">
 				  <h2>Primary:</h2>
 					<label for="pridropdown" data-prilabel="prilabel"></label>
-					<select name="primary" id="primary">
+					<select name="  " id="primary">
 						<option value="h1">h1</option>
 						<option value="h2">h2</option>
 						<option value="h3">h3</option>
@@ -179,7 +179,7 @@
 				var current = arr[i];
 				var sel = document.createElement("section");
 				sel.className = "fontselection";
-				sel.innerHTML = "<label for=\"pridropdown\" data-suggestlabel=\"suggestlabel\">" + current + "</label>" +
+				sel.innerHTML = "<label for=\"pridropdown\" style =\"font-family:" + current + "\" data-suggestlabel=\"suggestlabel\">" + current + "</label>" +
 					"<select name=\"suggest0\" " + i + " id=\"suggest0\" " + i + "><option value=\"h1\">h1</option><option value=\"h2\">h2</option><option value=\"h3\">h3</option><option value=\"h4\">h4</option><option value=\"h5\">h5</option><option value=\"h6\">h6</option><option value=\"p\">p</option><option value=\"li\">li</option></select>";
 				suggestions.appendChild(sel);
 			}
