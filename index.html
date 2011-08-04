@@ -170,12 +170,20 @@
 			document.getElementById("steptwo").scrollIntoView();
 			var sideb = document.getElementsByTagName('label');
 			for (var i = 0, l = 2; i < l; i++) {
-				var text = document.getElementById()
 				sideb[i].innerHTML = link;
 			}
+			var suggestions = document.getElementsByClassName("sidebar")[0];
 			for (var i = 0, l = arr.length; i < l; i++) {
-				
+				var current = arr[i];
+				var sel = document.createElement("div");
+				sel.className = "fontselection";
+				sel.innerHTML = "<label for=\"pridropdown\" data-suggestlabel=\"suggestlabel\">" + current + "</label>" +
+					"<select name=\"suggest0\" " + i + " id=\"suggest0\" " + i + "><option value=\"h1\">h1</option><option value=\"h2\">h2</option><option value=\"h3\">h3</option><option value=\"h4\">h4</option><option value=\"h5\">h5</option><option value=\"h6\">h6</option><option value=\"p\">p</option><option value=\"li\">li</option></select>";
+				suggestions.appendChild(sel);
 			}
+			var pre = document.getElementsByClassName("preview")[0];
+			pre.setAttribute("style", "font-family:" + link);
+			
 		}
 		
 		
